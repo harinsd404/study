@@ -1,0 +1,145 @@
+#container {
+    width: 100vw;
+    height: 1852px;
+    background: linear-gradient(to bottom, #99ABFD, #FFFFFF, #E7F8FF);
+}
+#header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.title{
+    width: 100vw;
+    height: 142px;
+    background-color: #E7F8FF;
+}
+h1 {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 58px;
+    color: #212C2F;
+}
+p {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 36px;
+    color: #E5B7CD;
+}
+#main {
+    display: flex;
+    width: 100vw;
+    height: 1710px;
+}
+
+
+.windows {
+    background: radial-gradient(50% 50% at 50% 50%, #D6E8FC 27.4%, #FFFFFF 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.m_area1{
+    width: 100vw;
+    height: 685px;
+}
+.m_area2{
+    width: 100vw;
+    height: 1025px;
+}
+.m_area1 .windows{
+    position: absolute;
+    width: 653px;
+    height: 555px;
+    left: 100px;
+    top: 192px;
+}
+.windows .windows_h{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    background: linear-gradient(360deg, #F7DBEA 21.15%, #FFFDFF 112.5%);
+    border-radius: 8px 8px 0px 0px;
+}
+.m_area1 .windows_h{
+    flex-direction: row-reverse;
+}
+.m_area1 .windows_h .icon{
+    margin-right: 26px;
+}
+.m_area1 .windows p {
+    margin: 89px 0 10px 29px;
+    color: #6C7994;
+}
+@font-face {
+    font-family: 'Cafe24Ohsquare';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.SInput {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.m_area1 .WhatSong{
+    width: 514px;
+    height: 48px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    padding-left: 22px;
+    font-family: 'Cafe24Ohsquare', sans-serif;
+    font-size: 24px;
+}
+.m_area1 .enter_box {
+    width: 48px;
+    height: 48px;
+    border-radius: 0 6px 6px 0;
+    background: linear-gradient(to bottom, #FFFDFF, #F7DBEA);
+}
+.m_area1 .input_area {
+    width: 589px;
+    height: 250px;
+    margin-left: 30px;
+    background-color: #FFFDFF;
+    border-radius: 6px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.m_area1 .DBtn{
+    width: 231px;
+    height: 56px;
+    background: linear-gradient(to bottom, #FAFEFF, #BFD4E9);
+    border-radius: 6px;
+    border: none;
+    margin: 25px 0 0 389px;
+
+    font-family: "Fugaz One", sans-serif;
+    font-style: normal;
+    font-size: 34px;
+    color: #6C7994;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+.m_area2 .windows {
+    /* windows2 */
+    margin-top: 50px;
+    position: absolute;
+    width: 997px;
+    height: 622px;
+    left: 351px;
+    top: 887px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.m_area2 .windows_h p{
+    margin-left: 35px;
+    margin-right: 629px;
+}
