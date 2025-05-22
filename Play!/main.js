@@ -5,27 +5,29 @@ const mArea2 = document.querySelector(".m_area2 .windows");
 
 // 1. 검색 후 API 호출
 form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const query = input.value.trim();
-  if (!query) return;
+    e.preventDefault();
+    const query = input.value.trim();
+    if (!query) return;
 
-  const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}&entity=song`);
-  const data = await response.json();
-  showResults(data.results);
+    const response = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(query)}&entity=song`);
+    const data = await response.json();
+    showResults(data.results);
 });
 
 // 2. 검색 결과 보여주기
 function showResults(results) {
-  inputArea.innerHTML = ""; // 기존 목록 초기화
-  results.forEach((track) => {
+    inputArea.innerHTML = ""; // 기존 목록 초기화
+    results.forEach((track) => {
     const item = document.createElement("div");
     item.className = "track-item";
     item.innerHTML = `
-      <img src="${track.artworkUrl100}" alt="앨범 커버">
-      <div class="track-title">${track.trackName} - ${track.artistName}</div>
+        <img src="${track.artworkUrl100}" alt="앨범 커버">
+        <div class="track-title">${track.trackName} - ${track.artistName}</div>
     `;
     item.addEventListener("click", () => {
-      showInMArea2(track);
+        document.querySelectorAll(".track-item").forEach(el => el.classList.remove("selected"));
+        item.classList.add("selected");
+        showInMArea2(track);
     });
     inputArea.appendChild(item);
   });
