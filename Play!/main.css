@@ -52,7 +52,7 @@ p {
 }
 .m_area1 .windows{
     position: absolute;
-    width: 653px;
+    width: 683px;
     height: 555px;
     left: 100px;
     top: 192px;
@@ -88,7 +88,7 @@ p {
     flex-direction: row;
 }
 .m_area1 .WhatSong{
-    width: 514px;
+    width: 541px;
     height: 48px;
     border-radius: 6px 0 0 6px;
     border: none;
@@ -109,23 +109,34 @@ p {
     background-color: #FFFDFF;
     border-radius: 6px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
 
-.m_area1 .DBtn{
-    width: 231px;
-    height: 56px;
-    background: linear-gradient(to bottom, #FAFEFF, #BFD4E9);
+    overflow-y: auto;
+    max-height: 250px; /* 기존 높이 유지 */
+    padding: 10px;
+}
+.track-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .track-item:hover {
+    background-color: #eee;
+  }
+  
+  .track-item img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
     border-radius: 6px;
-    border: none;
-    margin: 25px 0 0 389px;
-
-    font-family: "Fugaz One", sans-serif;
-    font-style: normal;
-    font-size: 34px;
+  }
+  
+  .track-title {
+    font-size: 20px;
+    font-family: 'Cafe24Ohsquare', sans-serif;
     color: #6C7994;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+  }
 
 
 .m_area2 .windows {
@@ -142,4 +153,32 @@ p {
 .m_area2 .windows_h p{
     margin-left: 35px;
     margin-right: 629px;
+}
+.m_area2 .track-display{
+    display: flex;
+    flex-wrap: wrap;
+}
+.m_area2 .album-art{
+    width: 362px;
+    height: 362px;
+    margin: 118px 0 57px 63px;
+}
+.Music {
+    height: 193px;
+}
+.m_area2 h1{
+    margin: 118px 0 0 57px;
+    font-family: 'Cafe24Ohsquare', sans-serif;
+    font-size: 48px;
+    color: #6C7994;
+}
+.track-display p{
+    margin: 16px 0 0 57px;
+    font-family: 'Cafe24Ohsquare', sans-serif;
+    font-weight: 100;
+    font-size: 27px;
+    color: #6C7994;
+}
+#audio-player {
+    margin: 66px 0 0 57px;
 }
