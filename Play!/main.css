@@ -167,7 +167,6 @@ p {
 }
 .m_area2 .track-display{
     display: flex;
-    flex-wrap: wrap;
 }
 .m_area2 .album-art{
     width: 362px;
