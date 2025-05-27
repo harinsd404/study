@@ -2,6 +2,23 @@ body {
     height: 1852 px;
     background: linear-gradient(to bottom, #99ABFD, #FFFFFF, #E7F8FF);
 }
+
+.progressbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #6C7994;
+    z-index: 9999;
+}
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, #99ABFD, #E5B7CD, #FFFFFF);
+    transition: width 0.1s linear;
+}
+
 #header{
     width: 100vw;
     display: flex;

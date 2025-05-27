@@ -3,6 +3,15 @@ const form = document.querySelector("form");
 const inputArea = document.querySelector(".input_area");
 const mArea2 = document.querySelector(".m_area2 .windows");
 
+const progressBar = document.getElementById('fill');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight; 
+      const scrolled = (scrollTop / scrollHeight) * 100; 
+      progressBar.style.width = scrolled + '%'; 
+    });
+
 // 1. 검색 후 API 호출
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -61,3 +70,21 @@ function showInMArea2(track) {
     barFill.style.width = percent + "%";
   });
 }
+
+// Scroll-based background gradient adjustment
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const percent = scrollY / maxScroll;
+
+  const startColor = [153, 171, 253]; // #99ABFD
+  const endColor = [229, 183, 205];   // #E5B7CD
+
+  const interpolatedColor = startColor.map((start, i) => {
+    const end = endColor[i];
+    return Math.round(start + (end - start) * percent);
+  });
+
+  const gradient = `linear-gradient(to bottom, rgb(${interpolatedColor.join(",")}), #FFFFFF, #E7F8FF)`;
+  document.body.style.background = gradient;
+});
