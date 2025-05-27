@@ -1,6 +1,5 @@
-#container {
-    width: 100vw;
-    height: 1852px;
+body {
+    height: 1852 px;
     background: linear-gradient(to bottom, #99ABFD, #FFFFFF, #E7F8FF);
 }
 #header{
@@ -191,4 +190,14 @@ p {
 }
 #audio-player {
     margin: 66px 0 0 57px;
+}
+
+.track-display .progress-bar-bg{
+    width: 818px;
+    height: 7px;
+    background-color: #6C7994;
+}
+.track-display .progress-bar-bg .progress-bar-fill{
+    height: 7px;
+    background-color: #E5B7CD;
 }
