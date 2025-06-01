@@ -35,7 +35,8 @@ header h1 {
     -webkit-text-stroke: 1px #20201E;
 }
 #main{
-    margin-top: 95px;
+    margin: 0 auto;
+    margin-top: 86px;
     display: flex;
     display: none;
     justify-content: center;
@@ -109,7 +110,7 @@ button {
     font-weight: 400;
     font-style: normal;  
     font-size: 24px;
-    color: #20201E;
+    color: #896E8B;
 }
 
 .close {
@@ -125,7 +126,7 @@ h3 {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 24px;
 
     background: linear-gradient(to bottom, #F7DBEA, #FFFFFF);
     -webkit-background-clip: text;
@@ -146,10 +147,10 @@ input {
     background-color: #FFFFFF;
     border-radius: 19px;
     border: solid 1px #20201E;
-    margin-bottom: 59px;
+    
     padding: 30px;
     word-break:break-all;
-
+    margin-bottom: 30px;
     font-family: 'Ownglyph_ParkDaHyun', sans-serif;
     font-size: 30px;
 }
@@ -158,12 +159,13 @@ input {
 }
 .letter {
     height: 492px;
+    margin-bottom: 77px;
 }
 .endBtn{
     background: linear-gradient(to bottom, #FFFFFF, #FAD2E5);
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 64px; 
-    color: #20201E;
+    font-size: 54px; 
+    color: #896E8B;
 }
