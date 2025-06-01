@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💌 W-Writing!</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
@@ -18,18 +18,26 @@
             <h1>W-Writing</h1>
         </header>
         <div id="main">
-            <form class="writingArea">
-                <div class="box">
-                    <h3>Who?</h3>
-                    <input type="text" maxlength="10" required class="who">
+            <div class="bg">
+                <div class="window">
+                    <div class="window_h set-modal"></div> <!--모달 창으로 변경 후 writing-page와 합치기-->
+                    <p>Start Writing?</p>
+                    <button class="startBtn">Done</button>
                 </div>
-                <div class="box">
-                    <h3>Writing-letter</h3>
-                    <input type="text" required class="letter">
-                </div>
-                <input type="submit" value="Done" class="endBtn">
-            </form>
+            </div> 
         </div>
+        <form class="writingArea">
+            <div class="box">
+                <h3>Who?</h3>
+                <input type="text" maxlength="10" required class="who">
+            </div>
+            <div class="box">
+                <h3>Writing-letter</h3>
+                <input type="text" required class="letter">
+            </div>
+            <input type="submit" value="Done" class="endBtn">
+        </form>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
