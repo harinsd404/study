@@ -17,26 +17,26 @@
         <header>
             <h1>W-Writing</h1>
         </header>
+        <div class="bg">
+            <div class="window">
+                <div class="window_h"></div> <!--모달 창으로 변경 후 writing-page와 합치기-->
+                <p>Start Writing?</p>
+                <button class="startBtn">Done</button>
+            </div>
+        </div> 
         <div id="main">
-            <div class="bg">
-                <div class="window">
-                    <div class="window_h set-modal"></div> <!--모달 창으로 변경 후 writing-page와 합치기-->
-                    <p>Start Writing?</p>
-                    <button class="startBtn">Done</button>
+            <form class="writingArea">
+                <div class="box">
+                    <h3>Who?</h3>
+                    <input type="text" maxlength="10" required class="who">
                 </div>
-            </div> 
+                <div class="box">
+                    <h3>Writing-letter</h3>
+                    <input type="text" required class="letter">
+                </div>
+                <input type="submit" value="Done" class="endBtn">
+            </form>
         </div>
-        <form class="writingArea">
-            <div class="box">
-                <h3>Who?</h3>
-                <input type="text" maxlength="10" required class="who">
-            </div>
-            <div class="box">
-                <h3>Writing-letter</h3>
-                <input type="text" required class="letter">
-            </div>
-            <input type="submit" value="Done" class="endBtn">
-        </form>
     </div>
     <script src="main.js"></script>
 </body>
