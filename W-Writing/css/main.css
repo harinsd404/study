@@ -153,7 +153,8 @@ input, textarea{
     word-break:break-all;
     margin-bottom: 26px;
     font-family: 'Ownglyph_ParkDaHyun', sans-serif;
-    font-size: 30px;
+    font-size: 34px;
+    color: #20201E;
 }
 .who {
     height: 37px;
