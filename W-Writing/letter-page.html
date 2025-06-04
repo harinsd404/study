@@ -33,5 +33,22 @@
         </div>
     </div>
     <script src="./main.js"></script>
+    <script>
+        const data = JSON.parse(localStorage.getItem('letterData'));
+
+        if (data) {
+            const main = document.getElementById('main');
+            main.insertAdjacentHTML('beforeend',  `
+                <div class="window">
+                    <div class="window_h"></div>
+                    <div class="textArea">
+                        <p class="to">To. ${data.who}</p>
+                        <p class="detail">${data.letter}</p>
+                        <p class="date">${data.date}</p>
+                    </div>
+                </div>
+            `);
+        }
+    </script>
 </body>
 </html>
