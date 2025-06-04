@@ -33,3 +33,5 @@ document.querySelector('.endBtn').addEventListener('click', (e) => {
         window.location = './letter-page.html';
         }
 });
+
+const wBtn = document.querySelector('.wBtn');
