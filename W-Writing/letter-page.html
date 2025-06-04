@@ -19,26 +19,17 @@
             <h1>W-Writing</h1>
         </header>
         <div id="main" style="display: block;">
-            <div class="window">
-                <div class="window_h"></div>
-                <div class="textArea">
-                    <p class="to">To. Day6</p>
-                    <p class="detail">
-                        도와줘요 Rock&Roll! 그 애 눈에 멋져 보이게 우주에서 가장 근사한 리듬으로 부탁해요.
-                        수많은 별들이 한없이 쏟아지던 가을밤 수줍게 뱉은 널 좋아해 이 말에 정말 예쁘게 그녀가 웃었다
-                    </p>
-                    <p class="date">2025-05-26 19:11</p>
-                </div>
-            </div>
             
             <div class="wArea">
-                <button class="wBtn">Writing</button>
+                <button onclick="location.href='./main.html'" class="wBtn">Writing</button>
             </div>
         </div>
     </div>
-    <script src="./main.js"></script>
     <script>
-        const data = JSON.parse(localStorage.getItem('letterData'));
+               let item = Number(localStorage.getItem("letterCount") || 0);
+        const data = JSON.parse(localStorage.getItem(`letterData${item}`));
+
+        item++;
 
         if (data) {
             const main = document.getElementById('main');

@@ -1,6 +1,8 @@
 const startBtn = document.querySelector('.startBtn');
 const mainWrite = document.getElementById('main');
 
+let item = Number(localStorage.getItem("letterCount") || 0);
+
 
 startBtn.addEventListener('click', () => {
     document.querySelector('.bg').classList.add('close');
@@ -17,7 +19,7 @@ document.querySelector('.endBtn').addEventListener('click', (e) => {
     
     let year = today.getFullYear();
     let month = (today.getMonth() + 1).toString().padStart(2, '0');
-    let day = today.getDay().toString().padStart(2, '0');
+    let day = today.getDate().toString().padStart(2, '0');
     let hours = today.getHours().toString().padStart(2, '0');
     let minutes = today.getMinutes().toString().padStart(2, '0'); 
     
@@ -25,7 +27,9 @@ document.querySelector('.endBtn').addEventListener('click', (e) => {
     console.log(date);
 
     if (who && letter) {
-        localStorage.setItem('letterData', JSON.stringify({
+        item++;
+        localStorage.setItem("letterCount", item);
+        localStorage.setItem(`letterData${item}`, JSON.stringify({
             who,
             letter,
             date
@@ -34,4 +38,4 @@ document.querySelector('.endBtn').addEventListener('click', (e) => {
         }
 });
 
-const wBtn = document.querySelector('.wBtn');
+
