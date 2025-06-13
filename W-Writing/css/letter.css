@@ -1,7 +1,21 @@
+@keyframes fadeMove {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 .window {
     margin: 20px 0 58px 0;
     width: 1005px;
     height: 534px;
+    transition: all 0.3s ease;
+    transform-origin: top;
+    animation: fadeMove 0.3s ease;
 }
 .window_h{
     width: 100%;
@@ -82,4 +96,8 @@ button{
 
     color: #FFFFFF;
     -webkit-text-stroke: 1px #20201E;
+}
+.sort{
+    right: 252px;
+    width: 137px;
 }
