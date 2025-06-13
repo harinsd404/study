@@ -1,7 +1,6 @@
 const startBtn = document.querySelector('.startBtn');
 const mainWrite = document.getElementById('main');
-
-let item = Number(localStorage.getItem("letterCount") || 0);
+let letterData = JSON.parse(localStorage.getItem('letterData')) || [];
 
 
 startBtn.addEventListener('click', () => {
@@ -12,8 +11,17 @@ startBtn.addEventListener('click', () => {
 document.querySelector('.endBtn').addEventListener('click', (e) => {
     e.preventDefault();
 
-    const who = document.querySelector('.who').value.trim();
-    const letter = document.querySelector('.letter').value.trim();
+    const who = document.querySelector('.who');
+    const letter = document.querySelector('.letter');
+    if (!who) {
+        who.focus();
+        alert('받는 사람의 이름을 입력하지 않았습니다.');
+        return;
+    } else if(!letter){
+        letter.focus();
+        alert('편지의 내용이 비어있습니다.');
+        return;
+    }
 
     let today = new Date(); 
     
@@ -25,17 +33,12 @@ document.querySelector('.endBtn').addEventListener('click', (e) => {
     
     const date = `${year}-${month}-${day} ${hours}:${minutes}`;
     console.log(date);
-
-    if (who && letter) {
-        item++;
-        localStorage.setItem("letterCount", item);
-        localStorage.setItem(`letterData${item}`, JSON.stringify({
-            who,
-            letter,
-            date
-        }));
-        window.location = './letter-page.html';
-        }
+    letterData.push({whoData: who.value.trim(), letterData: letter.value.trim(), dateData: date});
+    who.value = ``;
+    letter.value = ``;
+    
+    localStorage.setItem('letterData', JSON.stringify(letterData));
+    window.location = './letter-page.html';
 });
 
 
