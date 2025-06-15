@@ -26,36 +26,6 @@
             </div>
         </div>
     </div>
-    <script>
-        const data = JSON.parse(localStorage.getItem(`letterData`));
-        let count = 0;
-
-        function renderPage(data){
-            const main = document.getElementById('wMain');
-            main.innerHTML=``;
-            data.forEach(item=>{
-                main.insertAdjacentHTML('beforeend', `
-                <div class="window">
-                    <div class="window_h"></div>
-                    <div class="textArea">
-                        <p class="to">To. ${item.whoData}</p>
-                        <p class="detail">${item.letterData}</p>
-                        <p class="date">${item.dateData}</p>
-                    </div>
-                </div>
-            `); 
-            })
-            
-        }
-        renderPage(data);
-        function sortDate(){
-            count++;
-            if(count%2==0)
-                data.sort((a, b)=> a.dateData.localeCompare(b.dateData));
-            else
-                data.sort((a, b)=> b.dateData.localeCompare(a.dateData));
-            renderPage(data);
-        };
-    </script>
+    <script src="./letter.js"></script>
 </body>
 </html>
